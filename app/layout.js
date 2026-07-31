@@ -11,8 +11,9 @@ export default function RootLayout({ children }) {
       <body>
         <nav className="navbar glass">
           <div className="container">
-            <a href="/" className="logo">
-              Manjula<span>Binding</span>
+            <a href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <img src="/logo.png" alt="Manjula Binding Works Logo" style={{ height: '45px', width: '45px' }} />
+              <div>Manjula<span>Binding</span></div>
             </a>
             <div className="nav-links">
               <a href="/">Home</a>
@@ -31,7 +32,10 @@ export default function RootLayout({ children }) {
           <div className="container">
             <div className="footer-grid">
               <div className="footer-col">
-                <h3>Manjula Binding Works</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.5rem' }}>
+                  <img src="/logo.png" alt="Manjula Binding Works Logo" style={{ height: '40px', width: '40px', filter: 'brightness(0) invert(1)' }} />
+                  <h3 style={{ margin: 0 }}>Manjula Binding Works</h3>
+                </div>
                 <p>146 A Karnik Nagar,<br/>Solapur, Maharashtra 413006<br/>India</p>
               </div>
               <div className="footer-col">

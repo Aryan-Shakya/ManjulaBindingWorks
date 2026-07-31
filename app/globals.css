@@ -232,7 +232,7 @@ a {
   background: #f0f0f0;
 }
 
-.product-card:hover .product-image {
+.product-card:hover .product-image, .factory-image:hover {
   transform: scale(1.05);
 }
 
