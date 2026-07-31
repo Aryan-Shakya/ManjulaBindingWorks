@@ -3,7 +3,7 @@
 export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('तुमचा संदेश यशस्वीरीत्या पाठवला गेला आहे! आम्ही लवकरच तुमच्याशी संपर्क साधू.');
+    alert('तुमचा संदेश यशस्वीरित्या पाठवला गेला आहे! आम्ही लवकरच तुमच्याशी संपर्क साधू.');
   };
 
   return (

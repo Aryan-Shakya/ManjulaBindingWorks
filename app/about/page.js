@@ -40,7 +40,7 @@ export default async function About() {
           </h1>
           
           <p style={{ fontSize: '1.25rem', fontStyle: 'italic', color: 'var(--accent-red)', lineHeight: '1.8' }}>
-            "जिद्दीवर उभारलेले, आईच्या प्रेमाच्या आदरापोटी नाव दिलेले आणि पिढ्यानपिढ्या जतन केलेले जिवंत वारसा."
+            "जिद्दीवर उभारलेले, आईच्या प्रेमाच्या आदरापोटी नाव दिलेले आणि पिढ्यान्पिढ्या जतन केलेला जिवंत वारसा."
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export default async function About() {
           </div>
           <div className="contact-info-card animate-fade-in-up delay-300" style={{ flexDirection: 'column', gap: '0.5rem' }}>
             <h3 className="marathi-text" style={{ color: 'var(--accent-saffron)', fontSize: '1.2rem' }}>विस्तार (Growth)</h3>
-            <p>१ लहान खोलीपासून ते २ अत्याधुनिक कारखान्यांपर्यंत मजल.</p>
+            <p>१ लहान खोलीपासून ते २ अत्याधुनिक कारखान्यांपर्यंत मजल मारली.</p>
           </div>
           <div className="contact-info-card animate-fade-in-up delay-300" style={{ flexDirection: 'column', gap: '0.5rem' }}>
             <h3 className="marathi-text" style={{ color: 'var(--accent-saffron)', fontSize: '1.2rem' }}>प्रेरणा (Inspiration)</h3>

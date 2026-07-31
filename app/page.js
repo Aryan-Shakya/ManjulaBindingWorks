@@ -63,7 +63,7 @@ export default function Home() {
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="animate-fade-in-up">
             <h2 className="marathi-text" style={{ fontSize: '2.8rem', color: 'var(--primary)', marginBottom: '1rem' }}>
-              मंजूळ बाइंडिंगच का?
+              मंजूळ बाइंडिंगच का निवडावे?
             </h2>
             <p style={{ color: 'var(--secondary)', maxWidth: '650px', margin: '0 auto', fontSize: '1.1rem' }}>
               आम्ही केवळ पुस्तके बाइंड करत नाही, तर तुमच्या महत्त्वाच्या कागदपत्रांना टिकाऊपणा आणि सौंदर्य प्रदान करतो.
@@ -102,7 +102,7 @@ export default function Home() {
                   विविध प्रकार (Wide Variety)
                 </h3>
                 <p style={{ color: 'var(--secondary)' }}>
-                  शालेय वह्यांपासून ते व्यापारी लेजर, व्हॉउचर फाइल्स आणि ड्रॉईंग बुक्सपर्यंत सर्वकाही एकाच छताखाली.
+                  शालेय वह्यांपासून ते व्यापारी लेजर, व्हाउचर फाइल्स आणि ड्रॉइंग बुक्सपर्यंत सर्वकाही एकाच छताखाली.
                 </p>
               </div>
             </div>
