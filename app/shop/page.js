@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 
 export const metadata = {
-  title: 'Catalog | Manjula Binding Works',
+  title: 'उत्पादने (Catalog) | मंजूळ बाइंडिंग वर्क्स',
 };
 
 async function getProducts() {
@@ -15,35 +15,54 @@ export default async function Shop() {
   const products = await getProducts();
 
   return (
-    <div style={{ paddingTop: '8rem', paddingBottom: '4rem' }}>
+    <div style={{ paddingTop: '8rem', paddingBottom: '5rem' }}>
       <div className="container">
-        <h1 className="hero-title" style={{ fontSize: '3rem', marginBottom: '1rem', textAlign: 'center' }}>Our Catalog</h1>
-        <p style={{ textAlign: 'center', color: 'var(--secondary)', marginBottom: '4rem', fontSize: '1.125rem' }}>
-          Explore our premium range of notebooks, log books, and stationery files.
-        </p>
+        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <span className="marathi-text" style={{ 
+            color: 'var(--accent-saffron)', 
+            fontSize: '1.1rem',
+            background: 'var(--accent-gold-light)',
+            padding: '0.4rem 1.2rem',
+            borderRadius: '30px',
+            border: '1px solid var(--border-gold)'
+          }}>
+            ✦ आमची संपूर्ण उत्पादने (Catalog)
+          </span>
+          <h1 className="marathi-title" style={{ fontSize: '3.2rem', margin: '1rem 0 0.5rem 0', color: 'var(--primary)' }}>
+            दर्जेदार वह्या आणि बाइंडिंग उत्पादने
+          </h1>
+          <p style={{ color: 'var(--secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>
+            व्यापारी लेजर, शालेय नोटबुक्स आणि कस्टमाइज्ड फाइल्सचे समृद्ध भांडार.
+          </p>
+        </div>
 
         <div className="products-grid">
           {products.map((product, index) => {
-            // Rough mapping: product index 0 -> 2.jpeg
             const imageIndex = index + 2;
-            const fallbackImage = 'https://via.placeholder.com/400x300?text=No+Image';
             
             return (
-              <div key={index} className="product-card animate-fade-in-up" style={{ animationDelay: `${(index % 4) * 100}ms` }}>
-                <img 
-                  src={`/images/products/${imageIndex}.jpeg`}
-                  alt={product["Product Name / Description"]} 
-                  className="product-image"
-                />
+              <div key={index} className="product-card animate-fade-in-up" style={{ animationDelay: `${(index % 4) * 80}ms` }}>
+                <div className="product-image-frame">
+                  <img 
+                    src={`/images/products/${imageIndex}.jpeg`}
+                    alt={product["Product Name / Description"]} 
+                    className="product-image"
+                  />
+                </div>
+                
                 <div className="product-info">
-                  <div className="product-category">{product["Binding Type"]?.split(' ')[0] || 'Premium'} Binding</div>
+                  <div className="product-category">
+                    {product["Binding Type"]?.split(' ')[0] || 'प्रीमियम'} बाइंडिंग
+                  </div>
                   <h3 className="product-title">{product["Product Name / Description"]}</h3>
                   <div className="product-desc">
-                    <p style={{ marginBottom: '0.5rem' }}><strong>Paper:</strong> {product["Paper Quality"]}</p>
-                    <p style={{ marginBottom: '0.5rem' }}><strong>Size:</strong> {product["Size Format / Dimensions"]}</p>
-                    <p><strong>Pages:</strong> {product["Available Page Formats"]}</p>
+                    <p style={{ marginBottom: '0.4rem' }}><strong>कागद (Paper):</strong> {product["Paper Quality"]}</p>
+                    <p style={{ marginBottom: '0.4rem' }}><strong>आकार (Size):</strong> {product["Size Format / Dimensions"]}</p>
+                    <p><strong>पाने (Pages):</strong> {product["Available Page Formats"]}</p>
                   </div>
-                  <button className="btn btn-outline" style={{ width: '100%', marginTop: '1rem' }}>Inquire Now</button>
+                  <button className="btn btn-primary" style={{ width: '100%', marginTop: '0.5rem' }}>
+                    चौकशी करा (Inquire Now)
+                  </button>
                 </div>
               </div>
             );
