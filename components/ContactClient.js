@@ -59,7 +59,7 @@ export default function ContactClient() {
               <div className="contact-detail-text">
                 <h4 className={lang === 'mr' ? 'marathi-text' : ''}>{t.contact.phoneTitle}</h4>
                 <p>
-                  <a href="tel:+919999217000">+91 99992 17000</a><br />
+                  <a href="tel:+919850088537">+91 98500 88537</a><br />
                   <span style={{ fontSize: '0.85rem', color: '#999' }}>{t.contact.phoneSub}</span>
                 </p>
               </div>

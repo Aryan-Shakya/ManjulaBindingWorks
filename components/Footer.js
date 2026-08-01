@@ -26,6 +26,7 @@ export default function Footer() {
             </div>
             <p style={{ color: '#E2D9D2', lineHeight: '1.6' }}>
               {t.contact.address}<br />
+              <strong>Phone / WhatsApp:</strong> <a href="tel:+919850088537" style={{ display: 'inline', color: '#FFF' }}>+91 98500 88537</a><br />
               {t.footer.tagline}
             </p>
           </div>
