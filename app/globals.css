@@ -441,6 +441,190 @@ a {
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
 
+/* ==================
+   Contact Page
+   ================== */
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-sidebar-title {
+  font-family: var(--font-marathi);
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.contact-sidebar-sub {
+  color: var(--secondary);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.contact-detail-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--surface-card);
+  border-radius: 16px;
+  border: 1px solid var(--border-gold);
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(78, 0, 43, 0.04);
+}
+
+.contact-detail-card:hover {
+  border-color: var(--accent-gold);
+  transform: translateX(4px);
+  box-shadow: 0 8px 25px rgba(78, 0, 43, 0.1);
+}
+
+.contact-detail-icon {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  border-radius: 12px;
+  border: 1px solid var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.contact-detail-text h4 {
+  font-family: var(--font-marathi);
+  font-size: 1.05rem;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+}
+
+.contact-detail-text p,
+.contact-detail-text a {
+  color: var(--secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.contact-detail-text a:hover {
+  color: var(--accent-red);
+}
+
+/* Form Panel */
+.contact-form-panel {
+  background: var(--surface-card);
+  border-radius: 24px;
+  padding: 3rem;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 15px 40px rgba(78, 0, 43, 0.07);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-red), var(--accent-gold));
+}
+
+.contact-form-title {
+  font-family: var(--font-marathi);
+  font-size: 1.9rem;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+.contact-form-sub {
+  color: var(--secondary);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-group {
+  margin-bottom: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-family: var(--font-marathi);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.875rem 1.1rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--border-gold);
+  background: #FFFDF8;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--primary);
+  transition: var(--transition);
+  outline: none;
+  display: block;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: var(--accent-red);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(178, 31, 36, 0.1);
+}
+
+.form-control::placeholder {
+  color: #b5a99e;
+  font-size: 0.9rem;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* Business Hours Badge */
+.hours-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.2rem 1.5rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  border-radius: 14px;
+  margin-top: 1.5rem;
+  border: 1px solid var(--accent-gold);
+}
+
+.hours-badge span {
+  font-family: var(--font-marathi);
+  color: #FAF7F2;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.hours-badge strong {
+  color: var(--accent-gold);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; text-align: center; }
@@ -448,4 +632,7 @@ a {
   .hero-title { font-size: 3rem; }
   .hero-arch-wrapper { height: 400px; max-width: 340px; margin: 0 auto; }
   .nav-links { display: none; }
+  .contact-page-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form-panel { padding: 2rem 1.5rem; }
 }

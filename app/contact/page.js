@@ -1,82 +1,107 @@
 import ContactForm from '../../components/ContactForm';
 
 export const metadata = {
-  title: 'संपर्क (Contact Us) | मंजूळ बाइंडिंग वर्क्स',
+  title: 'संपर्क (Contact) | मंजूळ बाइंडिंग वर्क्स',
 };
 
 export default function Contact() {
   return (
-    <div style={{ paddingTop: '8rem', paddingBottom: '5rem' }}>
+    <div style={{ paddingTop: '8rem', paddingBottom: '6rem' }}>
       <div className="container">
+
+        {/* Page Header */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <span className="marathi-text" style={{ 
-            color: 'var(--accent-saffron)', 
-            fontSize: '1.1rem',
+          <span className="marathi-text" style={{
+            color: 'var(--accent-saffron)',
+            fontSize: '1.05rem',
             background: 'var(--accent-gold-light)',
             padding: '0.4rem 1.2rem',
             borderRadius: '30px',
-            border: '1px solid var(--border-gold)'
+            border: '1px solid var(--border-gold)',
+            display: 'inline-block',
+            marginBottom: '1.25rem'
           }}>
             ✦ संपर्क साधा (Get In Touch)
           </span>
-          <h1 className="marathi-text" style={{ fontSize: '3.2rem', margin: '1rem 0 0.5rem 0', color: 'var(--primary)' }}>
+          <h1 className="marathi-text" style={{ fontSize: '3rem', color: 'var(--primary)', marginBottom: '0.75rem' }}>
             आमच्याशी संपर्क साधा
           </h1>
-          <p style={{ color: 'var(--secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>
-            बाइंडिंग ऑर्डर्स, घाऊक खरेदी (Bulk Orders) किंवा कस्टमाइज्ड स्टेशनरीसाठी आजच संपर्क करा.
+          <p style={{ color: 'var(--secondary)', fontSize: '1.1rem', maxWidth: '580px', margin: '0 auto' }}>
+            ऑर्डर, घाऊक खरेदी किंवा कस्टम बाइंडिंगसाठी आजच आमच्याशी संपर्क करा.
           </p>
         </div>
 
-        <div className="contact-grid">
-          {/* Contact Details */}
+        {/* Two-column Layout */}
+        <div className="contact-page-grid">
+
+          {/* LEFT — Contact Details Sidebar */}
           <div className="animate-fade-in-up">
-            <div className="contact-info-card">
-              <div className="contact-icon">📍</div>
-              <div>
-                <h3 className="marathi-text" style={{ fontSize: '1.3rem', marginBottom: '0.4rem', color: 'var(--primary)' }}>
-                  कारखान्याचा पत्ता (Address)
-                </h3>
-                <p style={{ color: 'var(--secondary)', lineHeight: '1.6' }}>
-                  १४६ अ, कर्णिक नगर, दत्ता मंदिरा जवळ, <br />
-                  WIT कॉलेज मागे, सोलापूर, महाराष्ट्र ४१३००६
+            <h2 className="contact-sidebar-title">संपर्क माहिती</h2>
+            <p className="contact-sidebar-sub">
+              आम्ही सोमवार ते शनिवार सकाळी ९ ते संध्याकाळी ७ वाजेपर्यंत उपलब्ध आहोत.
+            </p>
+
+            {/* Address */}
+            <div className="contact-detail-card">
+              <div className="contact-detail-icon">📍</div>
+              <div className="contact-detail-text">
+                <h4>कारखान्याचा पत्ता (Address)</h4>
+                <p>
+                  १४६ अ, कर्णिक नगर, दत्त मंदिरा जवळ,<br />
+                  WIT कॉलेज मागे, सोलापूर,<br />
+                  महाराष्ट्र — ४१३ ००६
                 </p>
               </div>
             </div>
 
-            <div className="contact-info-card">
-              <div className="contact-icon">📞</div>
-              <div>
-                <h3 className="marathi-text" style={{ fontSize: '1.3rem', marginBottom: '0.4rem', color: 'var(--primary)' }}>
-                  फोन आणि व्हॉट्सॲप (Phone / WhatsApp)
-                </h3>
-                <p style={{ color: 'var(--secondary)' }}>
-                  संपर्क: +91 9999PX217X <br />
-                  (ऑर्डर चौकशीसाठी उपलब्ध)
+            {/* Phone */}
+            <div className="contact-detail-card">
+              <div className="contact-detail-icon">📞</div>
+              <div className="contact-detail-text">
+                <h4>फोन / व्हॉट्सॲप (Phone / WhatsApp)</h4>
+                <p>
+                  <a href="tel:+919999217000">+91 99992 17000</a><br />
+                  <span style={{ fontSize: '0.85rem', color: '#999' }}>ऑर्डर चौकशीसाठी उपलब्ध</span>
                 </p>
               </div>
             </div>
 
-            <div className="contact-info-card">
-              <div className="contact-icon">🗺️</div>
-              <div>
-                <h3 className="marathi-text" style={{ fontSize: '1.3rem', marginBottom: '0.4rem', color: 'var(--primary)' }}>
-                  गूगल मॅप्स (Google Location)
-                </h3>
-                <a 
-                  href="https://maps.app.goo.gl/bDvL6WbX9Nko9zTLA" 
-                  target="_blank" 
+            {/* Google Maps */}
+            <div className="contact-detail-card">
+              <div className="contact-detail-icon">🗺️</div>
+              <div className="contact-detail-text">
+                <h4>गूगल मॅप्स (Google Maps)</h4>
+                <a
+                  href="https://maps.app.goo.gl/bDvL6WbX9Nko9zTLA"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-outline"
-                  style={{ marginTop: '0.5rem', display: 'inline-flex' }}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    fontWeight: '600',
+                    color: 'var(--accent-red)',
+                    marginTop: '0.3rem'
+                  }}
                 >
-                  मॅपवर स्थान पहा (Open in Google Maps) ↗
+                  मॅपवर उघडा ↗
                 </a>
               </div>
             </div>
+
+            {/* Business Hours Badge */}
+            <div className="hours-badge">
+              <span style={{ fontSize: '1.5rem' }}>🕘</span>
+              <span>
+                <strong>कामाचे तास (Business Hours)</strong><br />
+                सोम — शनि &nbsp;|&nbsp; ९:०० AM – ७:०० PM
+              </span>
+            </div>
           </div>
 
-          {/* Contact Form Client Component */}
+          {/* RIGHT — Contact Form */}
           <ContactForm />
+
         </div>
       </div>
     </div>
