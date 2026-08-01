@@ -7,8 +7,20 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(t.contact.successAlert);
-    e.target.reset();
+    
+    const form = e.target;
+    const name = form.elements['contact-name'].value;
+    const phone = form.elements['contact-phone'].value;
+    const email = form.elements['contact-email'].value;
+    const subject = form.elements['contact-subject'].value;
+    const product = form.elements['contact-product'].value;
+    const message = form.elements['contact-message'].value;
+
+    const formattedMessage = `Hello Manjula Binding Works,\n\nI would like to make an inquiry:\n\n*Name:* ${name}\n*Phone:* ${phone}${email ? `\n*Email:* ${email}` : ''}\n*Subject:* ${subject}${product ? `\n*Product Type:* ${product}` : ''}\n*Message:* ${message}`;
+
+    const whatsappUrl = `https://wa.me/919850088537?text=${encodeURIComponent(formattedMessage)}`;
+
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -20,7 +32,7 @@ export default function ContactForm() {
         {t.contact.formSub}
       </p>
 
-      <form onSubmit={handleSubmit} noValidate>
+      <form onSubmit={handleSubmit}>
         {/* Row 1: Name + Phone */}
         <div className="form-row">
           <div className="form-group">
@@ -85,12 +97,12 @@ export default function ContactForm() {
           </label>
           <select id="contact-product" className="form-control">
             <option value="">{t.contact.selectProduct}</option>
-            <option value="notebook">{t.contact.prodNotebooks}</option>
-            <option value="ledger">{t.contact.prodLedger}</option>
-            <option value="register">{t.contact.prodRegister}</option>
-            <option value="voucher">{t.contact.prodVoucher}</option>
-            <option value="drawing">{t.contact.prodDrawing}</option>
-            <option value="custom">{t.contact.prodCustom}</option>
+            <option value="Notebooks">{t.contact.prodNotebooks}</option>
+            <option value="Ledger Books">{t.contact.prodLedger}</option>
+            <option value="Office Registers">{t.contact.prodRegister}</option>
+            <option value="Voucher Files">{t.contact.prodVoucher}</option>
+            <option value="Drawing Books">{t.contact.prodDrawing}</option>
+            <option value="Custom Order">{t.contact.prodCustom}</option>
           </select>
         </div>
 
@@ -108,7 +120,18 @@ export default function ContactForm() {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '1rem', fontSize: '1.1rem' }}>
+        <button 
+          type="submit" 
+          className="btn btn-primary" 
+          style={{ 
+            width: '100%', 
+            padding: '1rem', 
+            fontSize: '1.1rem',
+            background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
+            border: 'none',
+            color: '#FFF'
+          }}
+        >
           {t.contact.sendBtn}
         </button>
       </form>

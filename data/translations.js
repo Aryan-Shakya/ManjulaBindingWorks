@@ -59,7 +59,9 @@ export const translations = {
       paperLabel: "Paper:",
       sizeLabel: "Size:",
       pagesLabel: "Pages:",
-      inquireBtn: "Inquire Now →"
+      rulingLabel: "Ruling:",
+      inquireBtn: "Order on WhatsApp 💬",
+      viewDetailsBtn: "View Details ↗"
     },
     contact: {
       tag: "✦ Get In Touch",
@@ -76,7 +78,7 @@ export const translations = {
       hoursTitle: "Business Hours",
       hoursText: "Mon — Sat | 9:00 AM – 7:00 PM",
       formTitle: "Send Us a Message",
-      formSub: "Fill out the form below for inquiries or bulk purchases.",
+      formSub: "Fill out the form below to connect directly with us on WhatsApp.",
       fullName: "Full Name",
       fullNamePlaceholder: "e.g. Rahul Mane",
       mobile: "Mobile Number",
@@ -95,8 +97,8 @@ export const translations = {
       prodCustom: "Custom Order",
       message: "Message",
       messagePlaceholder: "Specify quantity, size, page count, or custom requirements...",
-      sendBtn: "✦ Send Message",
-      successAlert: "Your message has been sent successfully! We will contact you soon."
+      sendBtn: "💬 Send via WhatsApp",
+      successAlert: "Opening WhatsApp with your message..."
     },
     footer: {
       tagline: "Premier name in quality bookbinding and stationery.",
@@ -169,7 +171,9 @@ export const translations = {
       paperLabel: "कागद (Paper):",
       sizeLabel: "आकार (Size):",
       pagesLabel: "पाने (Pages):",
-      inquireBtn: "चौकशी करा (Inquire Now) →"
+      rulingLabel: "रुलिंग (Ruling):",
+      inquireBtn: "व्हॉट्सॲपवर ऑर्डर करा 💬",
+      viewDetailsBtn: "तपशील पहा ↗"
     },
     contact: {
       tag: "✦ संपर्क साधा (Get In Touch)",
@@ -186,7 +190,7 @@ export const translations = {
       hoursTitle: "कामाचे तास (Business Hours)",
       hoursText: "सोम — शनि | ९:०० AM – ७:०० PM",
       formTitle: "संदेश पाठवा",
-      formSub: "ऑर्डर, घाऊक खरेदी किंवा इतर चौकशीसाठी खालील फॉर्म भरा.",
+      formSub: "ऑर्डर, घाऊक खरेदी किंवा इतर चौकशीसाठी खालील फॉर्म भरा. संदेश थेट व्हॉट्सॲपवर पाठवला जाईल.",
       fullName: "तुमचे नाव (Full Name)",
       fullNamePlaceholder: "उदा. राहुल माने",
       mobile: "मोबाइल नंबर (Mobile)",
@@ -205,8 +209,8 @@ export const translations = {
       prodCustom: "कस्टम ऑर्डर / Custom Order",
       message: "तुमचा संदेश (Message)",
       messagePlaceholder: "ऑर्डरबद्दल अधिक तपशील इथे लिहा — जसे की प्रमाण, आकार, पानांची संख्या...",
-      sendBtn: "✦ संदेश पाठवा (Send Message)",
-      successAlert: "तुमचा संदेश यशस्वीरित्या पाठवला गेला आहे! आम्ही लवकरच तुमच्याशी संपर्क साधू."
+      sendBtn: "💬 व्हॉट्सॲपवर पाठवा",
+      successAlert: "व्हॉट्सॲप उघडत आहे..."
     },
     footer: {
       tagline: "उत्कृष्ट बाइंडिंग आणि स्टेशनरीचे विश्वासनीय नाव.",
